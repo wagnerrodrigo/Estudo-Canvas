@@ -7,7 +7,33 @@
 	<link rel="stylesheet" href="">
 </head>
 <body>
-	<h1> desenho pelos caminhos !!!</h1>
-	
+	<!-- <h1> desenho pelos caminhos !!!</h1> -->
+	<!-- lembrando que para desenhar usando os paths tenho que chamar o método beginPath -->
+	<!-- criando um path -->
+	<canvas id="canvas" width="300" height="300"></canvas>
+	<script>
+		// Canvas e contexto
+		var canvas = document.getElementById('canvas');
+		var context = canvas.getContext('2d');	
+		//Iniciar o caminho (apaga desenhos anteriores)
+		context.beginPath('context');
+
+		//Desenhar uma estrela
+		context.fill();
+		context.moveTo(75,250);
+		context.lineTo(150, 50);
+		context.lineTo(225, 255);
+		context.lineTo(50, 120);
+		context.lineTo(250, 120);
+		context.lineTo(75, 250);
+
+		// Configurando a linha
+		context.lineWidth = 2;
+		context.strokeStyle ='darkblue';
+
+		// Traçar as linhas do caminho
+		context.stroke();
+
+	</script>
 </body>
 </html>
