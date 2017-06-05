@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="">
 </head>
 <body>
-	<canvas id="Cir" width="300" height="300"></canvas>
+	<canvas id="Cir" width="600" height="600"></canvas>
 	<script>
 		// canvas e contexto
 		
@@ -23,8 +23,35 @@
 		//Primeito arco
 		contexto.beginPath();
 		//desenha
-		contexto.arc(50 ,50 40 , 90*Math.PI/180, 270*Math.PI/180, False);
-		
+		contexto.arc(50 ,50, 40 , 90*Math.PI/180, 270*Math.PI/180, false);
+		contexto.arc(150 ,50, 40, 90*Math.PI/180, 270*Math.PI/180, true);
+		// Preenchimento
+		contexto.fill();
+		// Contorno
+		contexto.stroke();
+
+		// metodo da apostila
+		contexto.beginPath();
+		//desenha
+		contexto.arc(50 ,150, 40 , 90*Math.PI/180, 270*Math.PI/180, false);
+
+		// Preenchimento
+		contexto.fill();
+		// Contorno
+		contexto.stroke();
+
+		//  se desenhar junto os dois lados da circunferencia vai ficar deformado !!!!
+		// Por isso deve se iniciar outro lado do path par completar aa circunferencia !!!!
+
+		// segunda parte o/
+		contexto.beginPath();
+		contexto.arc(150 ,150, 40, 90*Math.PI/180, 270*Math.PI/180, true);
+		// Preenchimento
+		contexto.fill();
+		// Contorno
+		contexto.stroke();
+
+
 	</script>
 </body>
 </html>
