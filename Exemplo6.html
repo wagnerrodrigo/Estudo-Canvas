@@ -22,7 +22,13 @@
 		// vamos para o arco
 		//Primeito arco
 		contexto.beginPath();
+		
+		//  se desenhar junto os dois lados da circunferencia vai ficar deformado !!!!
+		// Por isso deve se iniciar outro lado do path par completar aa circunferencia !!!!
+		// CLARO QUE AS POSIÇOES DE X ESTAO DIFERENTE !!! X 50 E X150
+
 		//desenha
+
 		contexto.arc(50 ,50, 40 , 90*Math.PI/180, 270*Math.PI/180, false);
 		contexto.arc(150 ,50, 40, 90*Math.PI/180, 270*Math.PI/180, true);
 		// Preenchimento
@@ -39,9 +45,13 @@
 		contexto.fill();
 		// Contorno
 		contexto.stroke();
+		// esse desenho e da circunferencia unida LADO A E LABO B
+		contexto.beginPath();
+		contexto.arc(50 ,250, 40 , 90*Math.PI/180, 270*Math.PI/180, false);
+		contexto.arc(50 ,250, 40, 90*Math.PI/180, 270*Math.PI/180, true);
+		contexto.fill();
+		contexto.stroke();
 
-		//  se desenhar junto os dois lados da circunferencia vai ficar deformado !!!!
-		// Por isso deve se iniciar outro lado do path par completar aa circunferencia !!!!
 
 		// segunda parte o/
 		contexto.beginPath();
@@ -51,6 +61,12 @@
 		// Contorno
 		contexto.stroke();
 
+		// circunferencia total
+		//
+		contexto.beginPath();
+		contexto.arc(150, 250, 40, 0, 2*Math.PI);
+		contexto.stroke();
+		// contexto.fill();
 
 	</script>
 </body>
