@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Animaçao</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<canvas id="AnimaEmeuPovo" width="300" height="300"></canvas>
+
+	<script>
+
+		// penfando as entradas
+		// var canvas = document.getElementById(' AnimaEmeuPovo' );
+		// var context = canvas.getContext('2d');
+		/*Outro informação esse nao usei o canvas como variavel pesquisar melhor !!!*/
+		
+		canvas = document.getElementById('AnimaEmeuPovo');
+		context = canvas.getContext('2d');
+		console.log(context);
+
+		/* esse exemplo não encontrei a falha no context (o navegado passava como erro Cannot read property 'getContext' of null mas depois de usar o console.log(context) e ver que ele estava imprimindo o x' e nao x +=20 e modificar para (var x +=20) e volta para o valor inicial o erro desapareceu Ôõ )*/
+
+
+
+
+		// Info da bola
+		var x = 100;
+		var y = 100;
+		var raio = 10;
+
+		// Iniciar a animação
+		requestAnimationFrame(mexerBola);
+		
+
+		// Função de animação
+		function mexerBola(){
+			// lipar o Canvas
+			context.clearRect(0, 0, canvas.width, canvas.height);
+
+			// Desenha a bola
+			context.beginPath();
+			context.arc(x, y, raio, 0 , Math.PI*2);
+			context.fill();
+
+			// deslocar 20 pixels para a direita
+			x += 5;
+			y += 90;
+
+			// Chamar o proximo ciclo da animação
+			requestAnimationFrame(mexerBola);
+		}
+	</script>
+
+
+</body>
+</html>
