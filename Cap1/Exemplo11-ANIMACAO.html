@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Animaçao</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<canvas id="AnimaEmeuPovo" width="300" height="300"></canvas>
+
+	<script>
+
+		// pegando as entradas
+			
+		canvas = document.getElementById('AnimaEmeuPovo');
+		context = canvas.getContext('2d');
+		console.log(context);
+
+
+
+		// Info da bola
+		var x = 10;
+		var y = 100;
+		var raio = 10;
+
+		// Momento inicial Descobrindo o tempo inicial
+		var anterior = new Date() .getTime();
+
+		// Iniciar a animação
+		requestAnimationFrame(mexerBola);
+		
+
+		// Função de animação
+		function mexerBola(){
+			// Momento atual
+			var agora = new Date().getTime();
+
+			//diferença Operação de tempo 
+			var decorrido = agora - anterior;
+
+			// lipar o Canvas
+			context.clearRect(0, 0, canvas.width, canvas.height);
+
+			// Desenha a bola
+			context.beginPath();
+			context.arc(x, y, raio, 0 , Math.PI*2);
+			context.fill();
+
+			// deslocar 20 pixels para a direita
+			// x += 5;
+			// y += 90;
+
+			// Deslocar 20 pixels por segundo
+			var velocidade = 100;
+			x += velocidade * decorrido / 1000;
+
+			/*  hahahahahha Genki dama hahahahahahahahahahaha 		x += velocidade * decorrido / 500;
+			y += velocidade * decorrido / 1000;  
+			raio += velocidade * decorrido / 1000; */
+
+
+			// Guardamos o instante para o próximo ciclo
+			anterior = agora;
+
+			// Chamar o proximo ciclo da animação
+			requestAnimationFrame(mexerBola);
+		}
+	</script>
+
+
+</body>
+</html>
