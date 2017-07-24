@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Objetos sem função Construtora</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+	//outra forma de criar objetos em javascript
+		var meuCarro = {
+			cor : 'azul',
+			velocidade: 0,
+			acelerar: function () {
+				this.velocidade +=10;
+			}
+		}
+		meuCarro.acelerar();
+		console.log(meuCarro.velocidade);
+	</script>
+</body>
+</html>
