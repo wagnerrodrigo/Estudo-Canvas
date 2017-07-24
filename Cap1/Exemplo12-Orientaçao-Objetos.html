@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Orientaçao Objeto</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		//Inicio da função construtora 
+		function Carro(cor, velocMaxima){
+			this.cor = cor;
+			this.velocMaxima = velocMaxima;
+			this.velocAtual = 0;
+
+			// criando o método
+			this.acelerar = function () {
+				this.velocAtual += 10;
+			}
+		}
+
+		// instanciando objetos da classe Carro
+		var meuCarro = new Carro('vermelho', 250);
+		var oponente = new Carro('azul', 300);
+
+		// Chamando um método somente em um objeto
+		meuCarro.acelerar();
+
+		// Verificando as velocidades
+		document.write(meuCarro.cor + ': ' + meuCarro.velocAtual);
+		document.write('<br>');
+		document.write(oponente.cor + ': ' + oponente.velocAtual);
+		
+		console.log(meuCarro.cor + ': ' + meuCarro.velocAtual);
+		console.log(oponente.cor + ': ' + oponente.velocAtual);
+
+	</script>
+</body> 
+</html>
