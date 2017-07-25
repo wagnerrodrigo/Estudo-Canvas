@@ -1,5 +1,5 @@
 //Construtor
-function Animacao() {
+function Animacao(context) {
 	this.context = context;
 	this.sprites =[];
 	this.ligado = false; // Atributo
@@ -17,10 +17,9 @@ Animacao.prototype ={
 // Método
 	desligar: function(){
 		this.ligado = false;
-	}
+	},
 
-},
-	proximoFrame: function(){
+proximoFrame: function(){
 	// Posso Continuar? ooo Mae eu posso ir brincar hahahahaha
 	if ( ! this.ligado ) return;
 
@@ -41,10 +40,10 @@ Animacao.prototype ={
 		animacao.proximoFrame();
 	});
 
+},
 	// limpar a tela
 	limparTela: function() {
 		var ctx = this.context; // Só para facilitar a escrita
 		ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 	}
-
 }
