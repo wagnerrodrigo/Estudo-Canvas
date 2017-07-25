@@ -7,9 +7,14 @@
 	<script src="Minhaanimacao.js"></script>
 	<script src="Bola.js"></script>
 	<!-- Minha bola fica meio estranho ou digamos muito oferecido hahahahaha -->
+	<style>
+		canvas{
+		border:4px solid #10945c
+		}
+	</style>
 </head>
 <body>
-	<canvas id="MinhaAnimacaoCanvas" width="500" height="500" style=" border: 1px solid black"></canvas>
+	<canvas id="MinhaAnimacaoCanvas" width="500" height="500" ></canvas>
 	<script>
 
 		// Aqui vai inicialização do aplicativo.
@@ -34,7 +39,7 @@
 		b2.y = 100;
 		b2.velocidadeX = -10;
 		b2.velocidadeY = 20;
-		b2.cor = 'red';
+		b2.cor = 'orange';
 		b2.raio = 30;
 
 		// Criando o loop de animação
