@@ -19,17 +19,23 @@
 		background:dodgerblue
 		}
 		#ligar{
-			position: absolute;
-			float: left;
-			height: 50px;
-			width: 50px
+			position:absolute;
+			/* float: left; */
+			padding: 5px 5px 5px 5px;
+			text-decoration: underline #7F90E9;
+			font-size: 1em;
+		}
+
+		#ligar:before{
+			background-color: red;
 		}
 		#desligar{
 			position: absolute;
 			float: left;
-			left: 65px;
-			height: 50px;
-			width: 50px
+			left: 75px;
+			padding: 5px 5px 5px 5px;
+			text-decoration: underline black;
+			font-size: 1em;
 		}
 
 
@@ -55,8 +61,8 @@
 </head>
 <body>
 	<canvas id="MinhaAnimacaoCanvas" width="500" height="500" ></canvas>
-	<label><button id="ligar" type="button" name="luz"></button></label>
-	<label><button id="desligar" type="button" name="luz"></button></label>
+	<label><button id="ligar" type="button" name="luz">LIGAR</button></label>
+	<label><button id="desligar" type="button" name="luz">DESLIGAR</button></label>
 	<script>
 
 		// Aqui vai inicialização do aplicativo.
