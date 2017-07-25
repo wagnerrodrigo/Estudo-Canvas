@@ -8,6 +8,10 @@
 	<script src="Bola.js"></script>
 	<!-- Minha bola fica meio estranho ou digamos muito oferecido hahahahaha -->
 	<style>
+	body{
+		width: 700px;
+		height: 700px;
+	}
 		canvas{
 		/*float: left;*/
 		border:5px solid #f00b9b;
@@ -22,6 +26,8 @@
 <body>
 	<canvas id="MinhaAnimacaoCanvas" width="500" height="500" ></canvas>
 	<label><button type="button" name="luz"></button></label>
+	<label><button type="button" name="luz"></button></label>
+	<label><button type="button" name="luz"></button></label>
 	<script>
 
 		// Aqui vai inicialização do aplicativo.
@@ -31,6 +37,9 @@
 		// Referencia para o CANVAS
 		var canvas = document.getElementById('MinhaAnimacaoCanvas');
 		var context = canvas.getContext('2d');
+		// adicionado botoes
+		var Btlig = document.getElementsByTagName(`button`);
+		console.log(Btlig);
 
 
 		// Criando alguns sprites
