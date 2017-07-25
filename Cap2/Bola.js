@@ -33,7 +33,7 @@ Bola.prototype = {
 		// Configurar o contexto de acordo com a Bola
 		ctx.fillStyle = this.cor;
 
-		// Desenhar 
+		// Desenhar
 		ctx.beginPath();
 		ctx.arc(this.x, this.y, this.raio, 0, 2 * Math.PI, false);
 		ctx.fill();
