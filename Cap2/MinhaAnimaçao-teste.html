@@ -9,25 +9,54 @@
 	<!-- Minha bola fica meio estranho ou digamos muito oferecido hahahahaha -->
 	<style>
 	body{
-		width: 700px;
-		height: 700px;
+		width: 400px;
+		height: 400px;
 	}
 		canvas{
 		/*float: left;*/
+		position: relative;
+		border:5px solid #f00b9b;
+		background:dodgerblue
+		}
+		#ligar{
+			position: absolute;
+			float: left;
+			height: 50px;
+			width: 50px
+		}
+		#desligar{
+			position: absolute;
+			float: left;
+			left: 65px;
+			height: 50px;
+			width: 50px
+		}
+
+
+		/* body{
+		width: 400px;
+		height: 400px;
+	}
+		canvas{
+		position: absolute;
 		border:5px solid #f00b9b;
 		background:dodgerblue
 		}
 		button{
+			position: relative;   POSICIONAMENTO DO BOTÃO ESTAVA ERRADO LEMBRA
+			float: left; 		DE O ITEN QUE VAI SER MOVIDO ELE E REATIVO
+			bottom: -500px;		E OUTRO E ABSILUTO NESSE CASO !!!!
 			height: 50px;
 			width: 50px
 		}
+
+ */
 	</style>
 </head>
 <body>
 	<canvas id="MinhaAnimacaoCanvas" width="500" height="500" ></canvas>
-	<label><button type="button" name="luz"></button></label>
-	<label><button type="button" name="luz"></button></label>
-	<label><button type="button" name="luz"></button></label>
+	<label><button id="ligar" type="button" name="luz"></button></label>
+	<label><button id="desligar" type="button" name="luz"></button></label>
 	<script>
 
 		// Aqui vai inicialização do aplicativo.
