@@ -24,7 +24,7 @@ proximoFrame: function(){
 	if ( ! this.ligado ) return;
 
 	// a cada ciclo, ligamos a tela ou desenhamos um fundo
-	this.limparTela();
+	 this.limparTela();
 
 	// Atualizamos o estado dos sprites
 	for (var i in this.sprites)
