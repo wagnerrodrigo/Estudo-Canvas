@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ler teclado </title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h1> uma forma equivocada de ler o teclado </h1>
+	<canvas id="meuTcl" width="500" height="500"></canvas>
+	<script>
+		// entradas
+		var canvas = document.getElementById("meuTcl");
+		var context = canvas.getContext('2d');
+
+		// Posiçao inicial do personagem
+		var posicao = 0;
+		desenharPersonagem();
+
+		document.addEventLinstener('keydown', function(evento) {
+			if (evento.keyCode == 37) {// seta para esquerda
+				posicao -=10;
+				desenharPersonagem();
+			}
+			else if (evento.keyCode == 39) {// seta para direita
+				posicao +=10;
+				desenharPersonagem();
+			}
+		})
+
+	</script>
+</body>
+</html>
