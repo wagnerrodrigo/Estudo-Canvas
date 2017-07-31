@@ -5,9 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Ler teclado </title>
 	<link rel="stylesheet" href="">
+	<style>
+		canvas{
+		border:5px solid #0D2978;
+		background:slategrey;
+		}
+	</style>
 </head>
 <body>
-	<h1> uma forma equivocada de ler o teclado </h1>
+	<h1> Uma forma equivocada de ler o teclado </h1>
 	<canvas id="meuTcl" width="500" height="500"></canvas>
 	<script>
 		// entradas
@@ -15,10 +21,10 @@
 		var context = canvas.getContext('2d');
 
 		// Posiçao inicial do personagem
-		var posicao = 0;
+		var posicao =0;
 		desenharPersonagem();
 
-		document.addEventLinstener('keydown', function(evento) {
+		document.addEventListener('keydown', function(evento) {
 			if (evento.keyCode == 37) {// seta para esquerda
 				posicao -=10;
 				desenharPersonagem();
@@ -27,7 +33,12 @@
 				posicao +=10;
 				desenharPersonagem();
 			}
-		})
+		});
+
+		function desenharPersonagem(){
+			context.clearRect(0, 0, canvas.width, canvas.height);
+			context.fillRect(posicao, 100, 20, 50);
+		}
 
 	</script>
 </body>
