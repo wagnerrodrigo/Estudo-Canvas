@@ -26,7 +26,7 @@ function Teclado(elemento){
 	Teclado.prototype = {
 		pressionada: function(tecla) {
 			//  teste se estava funcionado console.log(SETA_ESQUERDA);
-			// teste se estava funcionado console.log(SETA_DIREITA);
+			// teste se estava funcionado console.log(SETA_DIREITA); 
 			return this.pressionadas[tecla];
 		}
 }
