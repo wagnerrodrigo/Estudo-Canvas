@@ -23,10 +23,10 @@
 		// Posiçao inicial do personagem
 		var posicao =0;
 		desenharPersonagem();
-		// com esse codigo á um pequeno tempo entre precionar a tela e manter precionado 
+		// com esse codigo á um pequeno tempo entre precionar a tela e manter precionado
 		document.addEventListener('keydown', function(evento) {
 			if (evento.keyCode == 37) {// seta para esquerda
-				posicao -=10; 
+				posicao -=10;
 				desenharPersonagem();
 			}
 			else if (evento.keyCode == 39) {// seta para direita
@@ -41,5 +41,7 @@
 		}
 
 	</script>
+	 <!-- http://jlongster.com/Making-Sprite-based-Games-with-Canvas
+ Biolab Disaster  -->
 </body>
 </html>
