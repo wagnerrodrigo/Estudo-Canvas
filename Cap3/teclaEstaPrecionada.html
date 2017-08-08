@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>tecla esta precionada ?</title>
+	<script src="meuTeclado.js"></script>
+</head>
+<body>
+	<canvas id="apertaMais" width="500" height="500"></canvas>
+
+	<script>
+		// entradas 
+		var canvas = document.getElementById("apertaMais");
+		var context = canvas.getContext('2d');
+
+		var posicao = 0 ;
+		desenharPersonagem();
+
+		var teclado = new Teclado(document);
+
+		function animar() {
+			if (teclado.pressionada(SETA_ESQUERDA))
+				posicao -=10;
+			else if (teclado.pressionada(SETA_DIREITA))
+				posicao +=10;
+
+			desenharPersonagem();
+			requestAnimationFrame(animar);
+		}
+
+		function desenharPersonagem() {
+			context.clearRect(0, 0, canvas.width, canvas.height);
+			context.fillRect(posicao, 100, 20 ,50);
+		}
+			
+	</script>
+</body>
+</html>
