@@ -19,11 +19,13 @@
 
 		var teclado = new Teclado(document);
 
+		requestAnimationFrame(animar);
+
 		function animar() {
 			if (teclado.pressionada(SETA_ESQUERDA))
-				posicao -=10;
+				posicao -= 10;
 			else if (teclado.pressionada(SETA_DIREITA))
-				posicao +=10;
+				posicao += 10;
 
 			desenharPersonagem();
 			requestAnimationFrame(animar);
