@@ -18,7 +18,7 @@ Bola.prototype = {
 		}
 
 		if (this.y < this.raio || this.y > ctx.canvas.height - this.raio) {
-			this.velocidadeY *= -1;
+			this.veloicdadeY *= -1;
 		}
 		this.x += this.velocidadeX;
 		this.y += this.velocidadeY;
